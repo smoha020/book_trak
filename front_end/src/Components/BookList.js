@@ -28,7 +28,7 @@ class BookList extends Component {
                 <td> {book.genre} </td>
                 <td> {book.date} </td> 
                 <td> 
-                  <Link to={`/edit/${book._id}`} style={{color:'white'}} 
+                  <Link to={`/edit/${book._id}`} style={{color:'white', textAlign:'center'}} 
                   className="form-control bg-primary ">Edit
                   </Link> 
                   <button style={{color:'white'}} onClick={deleteBook.bind(this, book)} 

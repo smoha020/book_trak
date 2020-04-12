@@ -56,6 +56,7 @@ class EditExercise extends Component {
                         if(author._id == this.props.match.params._id) {
                             return author.author
                         }
+                        else return 
                     })}
                     name="author"
                     value={this.state.author}
