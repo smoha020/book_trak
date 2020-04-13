@@ -10,7 +10,7 @@
     "start": "node index",
     "server": "nodemon index",
     "dev": "concurrently \" npm run server  \" \" cd front_end && npm start  \"",
-    "heroku-postbuild": " npm install --prefix front_end && npm run build --prefix front_end"
+    "heroku-postbuild": "cd front_end && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
