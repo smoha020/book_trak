@@ -12,7 +12,7 @@ mongoose.connect(process.env.URI, {
 });
 
 var db = mongoose.connection;
-db.on('error', () => console.log('connection error:'));
+db.on('error', (err) => console.log(err));
 db.once('open', () => console.log('we are connected'));
 
 const app = express();
