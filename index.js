@@ -6,7 +6,7 @@ const path = require('path');
 require('dotenv').config();
 
 //mongoose 
-mongoose.connect('mongodb://localhost/book_trak', {
+mongoose.connect(process.env.URI || 'mongodb://localhost/book_trak', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
