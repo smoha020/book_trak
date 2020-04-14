@@ -27,8 +27,9 @@ app.use('/book', require('./routes/book'));
 app.use('/author', require('./routes/author'));
 
 if(process.env.NODE.ENV === 'production') {
-  app.use(express.static('front_end/build'));
+  app.use(express.static(path.join(__dirname, 'front_end', 'build')));
 
+  console.log('inside if')
   app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'front_end', 'build', 'index.html'))
   });
