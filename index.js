@@ -26,13 +26,12 @@ app.use(cors())
 app.use('/book', require('./routes/book'));
 app.use('/author', require('./routes/author'));
 
-if(process.env.NODE.ENV === 'production') {
-  //app.use(express.static(path.join(__dirname, 'front_end', 'build')));
+if(process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'front_end', 'build')));
 
 
   app.get('*', (req, res) => {
-    //res.sendFile(path.join(__dirname, 'front_end', 'build', 'index.html'))
-    res.send("welcome to heroku");
+    res.sendFile(path.join(__dirname, 'front_end', 'build', 'index.html'))
   });
 }
 
