@@ -31,7 +31,8 @@ if(process.env.NODE.ENV === 'production') {
 
 
   app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front_end', 'build', 'index.html'))
+    //res.sendFile(path.join(__dirname, 'front_end', 'build', 'index.html'))
+    res.send("welcome to heroku");
   });
   
 }
