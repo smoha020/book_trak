@@ -117,32 +117,3 @@ all props properties such as  props.match...etc*/
 
 export default App;
 
-/* 
-WHAT I LEANRED 
-
---One advantage of fetching data from a database is that you wont
-have to worry about passing data between sibling components (which 
-requires redux or the context API) . if you dont know how to use 
-those two then you are going to make states for almost every component 
-and have very repetative code. as  a remedy, I pass in data from child 
-to parent to other child. 
-Example: I could not pass in the props directly from the ExerciseList 
-component to the EditExercise component. instead, the EditExercise 
-component had to be a direct child of the App component.
-
-
---the first option on author in the CreateExercise component was not 
-selectable: add "select an option" option and make it selected 
-(dafaultValue="selected") 
-
---in the ExerciseList component the key should be for 
-<React.Fragment> not for <tr>
-
---calling the onClick in the EditExercise component: don't 
-pass in e. no neccessity for e.preventDefault() 
-
---when rendering components we use {...props} to be able to access 
-all props properties such as  props.match...
-I needed this to extract the id from the link in the EditExercise 
-component.
-*/
