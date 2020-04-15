@@ -39,26 +39,3 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log('running on Port ' + PORT)); 
 
-
-
-
-/*   BACKEND NOTES
-
---nodemon was not working properly because on the start and dev
-scripts I wrote express.js instead of express. nothing was working 
-because of this.
-
---concurrently was not working untill they could not run on the same 
-port. Changed port on index.js(this file) to 5000.
-
---when creating a new exercise in the front end, you dont make an id 
-propoerty in the new object becaue mongodb will do it.
-
---when updating, don't put id in the schema. This gave me problems.
-
---for the put request copy how its done on mongoose documentation
-
---app.use instead of app.get on index.js when requiring routes
-
-
-*/
